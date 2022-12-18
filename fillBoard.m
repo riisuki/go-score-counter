@@ -38,6 +38,8 @@ function ret = fillBoard(boardArray)
                             isBlackTerritory = true;
                         elseif ret(i-1,j) == 2
                             isWhiteTerritory = true;
+                        elseif ret(i-1,j) > 4
+                            ret(ret==ret(i-1,j))=k;
                         end
                     end
 
@@ -46,6 +48,8 @@ function ret = fillBoard(boardArray)
                             isBlackTerritory = true;
                         elseif ret(i+1,j) == 2
                             isWhiteTerritory = true;
+                        elseif ret(i+1,j) > 4
+                            ret(ret==ret(i+1,j))=k;
                         end
                     end
 
@@ -54,6 +58,8 @@ function ret = fillBoard(boardArray)
                             isBlackTerritory = true;
                         elseif ret(i,j-1) == 2
                             isWhiteTerritory = true;
+                        elseif ret(i,j-1) > 4
+                            ret(ret==ret(i,j-1))=k;
                         end
                     end
 
@@ -62,6 +68,8 @@ function ret = fillBoard(boardArray)
                             isBlackTerritory = true;
                         elseif ret(i,j+1) == 2
                             isWhiteTerritory = true;
+                        elseif ret(i,j+1) > 4
+                            ret(ret==ret(i,j+1))=k;
                         end
                     end
 
